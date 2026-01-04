@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import About from "./About";
 
 export default function App() {
     useEffect(() => {
