@@ -1,0 +1,64 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(14px);
+    background: rgba(2, 6, 23, 0.7);
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(
+        270deg,
+        #38bdf8,
+        #a78bfa,
+        #6366f1
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-items {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-items li {
+    cursor: pointer;
+    background: linear-gradient(
+        270deg,
+        #c7d2fe,
+        #38bdf8,
+        #a78bfa
+    );
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.nav-items li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    transition: width 0.25s ease;
+}
+
+.nav-items li:hover::after {
+    width: 100%;
+}

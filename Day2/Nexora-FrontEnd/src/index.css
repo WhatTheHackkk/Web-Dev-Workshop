@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #020617;
+    color: #e5e7eb;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+/* ===== GALAXY LAYER (REAL ELEMENT) ===== */
+.galaxy-layer {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 40% 60%, rgba(99,102,241,0.6), transparent),
+        radial-gradient(2px 2px at 10% 20%, rgba(56,189,248,0.5), transparent);
+    background-size: 400px 400px;
+    pointer-events: none;
+    z-index: -1;
+    transition: transform 0.15s ease-out;
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #38bdf8, transparent);
+    box-shadow: 0 0 20px #6366f1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* ===== UTIL ===== */
+.glow-text {
+    text-shadow:
+        0 0 12px rgba(99,102,241,0.7),
+        0 0 24px rgba(56,189,248,0.5);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,118 @@
+.about {
+    padding: 140px 0 160px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+/* TEXT BLOCK */
+.about-content {
+    max-width: 800px;
+}
+
+.about-heading {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.about-text {
+    margin-top: 26px;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #94a3b8;
+    text-shadow: 0 0 12px rgba(99, 102, 241, 0.35);
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-box {
+    width: 240px;
+    padding: 38px 22px;
+    border-radius: 20px;
+    background: #020617;
+    position: relative;
+    text-align: center;
+}
+
+.stat-box::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(
+        270deg,
+        #ec4899,
+        #38bdf8,
+        #1e3a8a
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 6s linear infinite;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.stat-box h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-box p {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: #c7d2fe;
+}
+
+/* SOCIALS */
+.social-line {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #c7d2fe;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link svg {
+    font-size: 1.4rem;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    color: #38bdf8;
+}
+
+.glow-separator {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(
+        270deg,
+        #ec4899,
+        #38bdf8,
+        #1e3a8a
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 6s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 10px rgba(236, 72, 153, 0.6),
+        0 0 20px rgba(56, 189, 248, 0.5);
+}

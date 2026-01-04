@@ -1,0 +1,65 @@
+.home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.home-content {
+    position: relative;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.home-glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, #6366f1, transparent 65%);
+    filter: blur(150px);
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.55;
+    z-index: -1;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 60px); }
+    100% { transform: translate(-50%, 0); }
+}
+
+.home-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    color: #94a3b8;
+}
+
+.home-title {
+    margin-top: 28px;
+    font-size: 4.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.animated-gradient {
+    background: linear-gradient(270deg, #38bdf8, #a78bfa, #6366f1);
+    background-size: 400% 400%;
+    animation: gradientShift 7s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-description {
+    margin-top: 36px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #cbd5f5;
+    text-shadow: 0 0 12px rgba(99,102,241,0.35);
+}
